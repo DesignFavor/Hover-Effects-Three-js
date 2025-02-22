@@ -19,10 +19,10 @@ resizeCanvas();
 
 let config = {
     SIM_RESOLUTION: 128,
-    DYE_RESOLUTION: 1024,
+    DYE_RESOLUTION: 512,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 4,
-    VELOCITY_DISSIPATION: 0.6,
+    DENSITY_DISSIPATION: 5,
+    VELOCITY_DISSIPATION: 0.5,
     PRESSURE: 0.8,
     PRESSURE_ITERATIONS: 20,
     CURL: 6,
@@ -34,15 +34,12 @@ let config = {
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
     TRANSPARENT: true,
-    BLOOM: true,
+    BLOOM: false,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
-    BLOOM_INTENSITY: 0.8,
+    BLOOM_INTENSITY: 0.5,
     BLOOM_THRESHOLD: 0.6,
     BLOOM_SOFT_KNEE: 0.7,
-    SUNRAYS: false,
-    SUNRAYS_RESOLUTION: 196,
-    SUNRAYS_WEIGHT: 1.0,
 }
 
 function pointerPrototype () {
@@ -1457,7 +1454,7 @@ function correctDeltaY (delta) {
 }
 
 function generateColor () {
-    return { r: 121 / 255, g: 53 / 255, b: 50 / 255 };
+    return { r: 217 / 255, g: 217 / 255, b: 217 / 255 };
 }
 
 function HSVtoRGB (h, s, v) {
